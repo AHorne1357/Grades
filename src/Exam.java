@@ -10,14 +10,12 @@ public class Exam extends Assessment {
         numQuestions = questions;
         numMissed = missed;
 
-        // Calculate points each question is worth (assuming 100 total points)
         if (numQuestions > 0) {
             pointsEach = 100 / numQuestions;
         } else {
             pointsEach = 0;
         }
 
-        // Calculate the numeric score and set it in the parent Assessment class
         int score = 100 - (numMissed * pointsEach);
         setScore(score);
     }
